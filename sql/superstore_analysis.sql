@@ -1,0 +1,2 @@
+-- Superstore Sales Analysis
+-- SQL queries will be added here
