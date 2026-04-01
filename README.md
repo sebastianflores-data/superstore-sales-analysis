@@ -44,144 +44,180 @@ Ganancias
 - **Herramientas de Excel/BI**: visualización de datos 
 - **GitHub**: documentación y portafolio del proyecto 
 
---- 
+## Analisis General
 
-## Estructura del proyecto
-superstore-sales-analysis
-│
-├── README.md
-│
-├── sql
-│ └── superstore_analysis.sql
-│
-├── datos
-│ └── información del conjunto de datos
-│
-├── imágenes
-│ └── gráficos y capturas de pantalla
-│
-└── paneles
-└── archivos del panel
+El análisis revela un negocio con alto volumen de ventas pero margen moderado (11,2%), donde la rentabilidad está impulsada principalmente por ciertas regiones, categorías y clientes específicos.
 
-## Análisis realizado 
+Se identifica una concentración clara de ingresos en la región Oeste, una fuerte dependencia del método de pago contra reembolso (COD) y un crecimiento sostenido de ventas hacia finales del período analizado (2020).
 
-El proyecto incluye varios análisis SQL: 
+## 📈 KPIs Principales
 
-### 1. KPI de negocios 
+-💰 Ventas Totales: $1.565.804
+-📊 Ganancia Total: $175.262
+-📦 Pedidos Totales: 5.901
+-📉 Margen de Ganancia: 11,2%
+-🚚 Promedio días de envío: 3,9 días
 
-- Ingresos totales 
-- Utilidad total 
-- Margen de utilidad 
-- Pedidos totales 
-- Clientes totales 
+🔎 Interpretación:
+-El negocio tiene buena escala de ingresos, pero el margen es relativamente bajo → oportunidad clara de optimización.
+-El volumen de pedidos es alto, lo que indica fuerte actividad comercial, pero no necesariamente eficiencia en rentabilidad.
+-El tiempo de envío es competitivo, lo que sugiere una operación logística eficiente.
 
---- 
+## 🌍 Análisis Geográfico
 
-### 2. Rentabilidad por categoría 
+Ingresos por Región
+-🥇 Oeste → $522K
+-🥈 Este → $450K
+-🥉 Central → $341K
+-🔻 Sur → $252K
 
-Identifica qué categorías de productos generan la mayor cantidad de ingresos y utilidades. 
+🔎 Insights:
+-La región Oeste concentra el mayor ingreso y probablemente la mayor rentabilidad.
+-Existe una brecha significativa con la región Sur, lo que indica oportunidades de crecimiento o problemas de penetración.
 
-**Hallazgo clave:** 
+📌 Implicación de negocio:
+👉 El negocio no está equilibrado geográficamente → dependencia de una región clave.
 
-La tecnología es la categoría más rentable con el margen más alto. 
+## 👥 Análisis de Clientes
 
---- 
+Top 7 Clientes:
+El revenue está distribuido entre un grupo reducido de clientes, confirmando una concentración de ingresos en cuentas clave.
 
-### 3. Rentabilidad por subcategoría 
+🔎 Insight clave:
+-No todos los clientes de alto volumen son necesariamente los más rentables.
+-Existe potencial para optimizar la cartera de clientes en base a margen y no solo volumen.
 
-Analiza la rentabilidad a nivel de producto. 
+📌 Implicación:
+👉 Estrategia necesaria de Customer Value Management (CVM)
 
-**Conocimientos clave:** 
+## 🛍️ Análisis de Productos
 
-- Las fotocopiadoras generan márgenes extremadamente altos. 
-- Las mesas y estanterías generan pérdidas. 
+Top Subcategorías por Ingresos:
+-Phones
+-Chairs
+-Binders
+-Storage
+-Accessories
+-Tables
+-Paper
+🔎 Insights:
+-Phones lidera claramente el ingreso, alineado con el buen desempeño de Tecnología.
+-Subcategorías como Tables aparecen en el top de ingresos pero (según SQL) generan pérdidas, lo que es crítico.
 
---- 
+📌 Implicación:
+👉 Alto riesgo de falsa rentabilidad basada en volumen y no en margen
 
-### 4. Rendimiento regional 
+##💳 Análisis de Métodos de Pago
 
-Evalúa los ingresos y las utilidades en las regiones. 
+Distribución:
+-COD (Contra reembolso) → 43%
+-Online → 35%
+-Tarjetas → 22%
 
-**Hallazgo clave:** 
+🔎 Insights:
+-Fuerte dependencia de COD
+-Bajo uso de tarjetas
 
-La **región oeste** genera los mayores ingresos y utilidades. 
+📌 Implicación:
+👉 Mayor riesgo operativo y costos logísticos asociados
 
---- 
+##Ventas por Mes (2019–2020)
 
-### 5. Análisis de clientes 
+🔎 Insights:
+-Tendencia creciente hacia finales de año
+-Picos claros en Q4 (último trimestre)
+-2020 muestra mayor volumen que 2019
 
-Identifica a los clientes más rentables. 
+📌 Implicación:
+👉 Negocio altamente influenciado por estacionalidad
 
-**Conocimiento:** 
+##🚚 Análisis Logístico
+-Promedio de envío: 3,9 días
+-Dominancia del envío estándar
 
-Los clientes con altos ingresos no siempre son los más rentables, lo que demuestra la importancia de la combinación de productos. 
+🔎 Insight:
+-El negocio está optimizado para eficiencia de costos logísticos, no para velocidad premium.
 
---- 
+##💡 Insights Estratégicos Integrados
 
-### 6. Análisis del segmento de clientes 
+-La rentabilidad está concentrada en pocas categorías y productos
+-Existe desbalance geográfico significativo
+-Algunos productos generan ingresos pero destruyen margen
+-El negocio depende fuertemente de clientes y regiones específicas
+-Alta dependencia de métodos de pago de mayor riesgo (COD)
+-Fuerte estacionalidad en ventas
 
-Compara el rendimiento en los segmentos de clientes. 
+##🚀 Recomendaciones Estratégicas
+1. Optimización de Margen
 
-**Hallazgos clave:** 
+👉 Acción:
+Eliminar o reestructurar productos con pérdidas (ej: Tables)
+Ajustar pricing o costos
 
-- El segmento de consumo genera la mayor cantidad de ingresos. 
-- La oficina en casa muestra el margen de beneficio más alto. 
+👉 Impacto:
+✔ Incremento directo del margen global
 
---- 
+2. Estrategia de Expansión Regional
 
-### 7. Análisis del método de pago 
+👉 Acción:
+Replicar estrategia de la región Oeste en otras regiones
+Invertir en marketing en regiones subdesarrolladas
 
-Evalúa las preferencias de pago del cliente. 
+👉 Impacto:
+✔ Diversificación de ingresos
 
-**Perspectiva:** 
+3. Gestión Avanzada de Clientes
 
-El pago contra reembolso es el método de pago más utilizado. 
+👉 Acción:
+Identificar clientes de alto margen
+Reducir dependencia de clientes poco rentables
 
---- 
+👉 Impacto:
+✔ Mayor eficiencia comercial
 
-### 8. Contribución a las ganancias del producto (análisis de Pareto) 
+4. Optimización del Mix de Productos
 
-Identifica los productos que generan la mayor parte de las ganancias. 
+👉 Acción:
+Priorizar productos de alta rentabilidad (Tecnología)
+Reducir exposición en categorías deficitarias
 
-**Perspectiva clave:** 
+👉 Impacto:
+✔ Mejora estructural del negocio
 
-Un pequeño porcentaje de productos genera una gran parte de las ganancias totales. 
+5. Transformación de Métodos de Pago
 
---- 
+👉 Acción:
+Incentivar pagos digitales
+Reducir COD
 
-### 9. Análisis de logística y envíos 
+👉 Impacto:
+✔ Reducción de riesgo y costos
 
-Analiza los métodos de entrega y el tiempo de envío. 
+6. Estrategia Comercial Basada en Estacionalidad
 
-**Perspectivas clave:** 
+👉 Acción:
+Aumentar inversión en Q4
+Planificar stock y campañas
 
-- La clase estándar domina el volumen de pedidos y las ganancias. 
-- Los métodos de envío más rápidos representan una parte menor de los pedidos. 
+👉 Impacto:
+✔ Maximización de ingresos
 
---- 
+🔮 Oportunidades Futuras
+-Modelos de predicción de ventas
+-Segmentación avanzada de clientes
+-Pricing dinámico
+-Optimización logística basada en datos
 
-## Perspectivas comerciales clave 
+##🎯 Conclusión
 
-- La rentabilidad está altamente concentrada en un pequeño número de productos. 
-- Ciertos productos relacionados con los muebles generan pérdidas constantes. 
-- Los productos tecnológicos impulsan los márgenes más altos. 
-- El envío estándar es el método de entrega más utilizado. 
-- Los segmentos de clientes se comportan de manera diferente en términos de rentabilidad. 
+-El negocio presenta una base sólida en términos de volumen de ventas, pero enfrenta desafíos en eficiencia de rentabilidad y distribución estratégica.
 
---- 
+Las principales oportunidades se encuentran en:
+-optimización del margen
+-mejora del mix de productos
+-diversificación geográfica
+-profesionalización de la estrategia comercial
 
-## Recomendaciones 
-
-basadas en el análisis: 
-
-- Concentrar los esfuerzos de marketing en **categorías de productos de alto margen** 
-- Reevaluar los precios o la estructura de costos para los **productos que generan pérdidas**
-- Optimizar la combinación de productos para aumentar la rentabilidad 
-- Considerar la expansión de líneas de productos de alto rendimiento 
-
---- 
-
-## Autor 
-
-Sebastián Flores   
-Proyecto Portafolio de Análisis de Datos
+👤 Autor
+Sebastián Flores
+Data Analyst Portfolio
